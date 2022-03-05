@@ -28,10 +28,20 @@ struct DogsView: View {
             RemoteImageView(fromURL: URL(string: path.message)!)
             // Force unwrapped, will fail (and has failed) if there is no value that can be obtained
             
-            // Push main image to top of screen
-            Spacer()
-
-        }
+                Button(action: {
+                    Task {
+                        // Calls function that loads a new photo
+                        await loadNewImage()
+                    }
+                }, label: {
+                    Text("New Image")
+                        .font(.title2)
+                })
+                    .buttonStyle(.bordered)
+                    .padding()
+                    .tint(.black)
+            
+            }
         // Runs once when the app is opened
         .task {
             await loadNewImage()
