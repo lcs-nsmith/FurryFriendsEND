@@ -15,6 +15,8 @@ struct ContentView: View {
     // Model for which the "DogPathEndpoint" is brought in
     // 'message' is the web URL stored as a string { property of "DogPathEndpoint"
     @State var path: DogPathEndpoint = DogPathEndpoint(message: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/White_Background_%28To_id_screen_dust_during_cleanup%29.jpg/640px-White_Background_%28To_id_screen_dust_during_cleanup%29.jpg")
+    //*link to blank white image 640 x 360*
+    // so that the image the program loads before the one we actualy want is a blank
     
     // MARK: Computed properties
     
