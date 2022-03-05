@@ -1,14 +1,14 @@
 //
-//  ContentView.swift
+//  DogsView.swift
 //  FurryFriends
 //
-//  Created by Russell Gordon on 2022-02-26.
+//  Modified by Nathan Smith on 2022-03-05.
 //
 
 import SwiftUI
 import Foundation
 
-struct ContentView: View {
+struct DogsView: View {
     
     // MARK: Stored properties
     
@@ -79,10 +79,10 @@ struct ContentView: View {
     
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct DogsView_Previews: PreviewProvider {
     static var previews: some View {
         TabView {
-            ContentView()
+            DogsView()
         }
     }
 }

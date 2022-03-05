@@ -11,8 +11,19 @@ import SwiftUI
 struct FurryFriendsApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                ContentView()
+            TabView {
+                DogsView()
+                    .tabItem {
+                        Image("dogIcon")
+                            .resizable()
+                            .frame(width: 1, height: 1, alignment: .center)
+                        Text("Dogs")
+                    }
+                CatsView()
+                    .tabItem {
+                        Image("catIcon")
+                        Text("Cats")
+                    }
             }
         }
     }
