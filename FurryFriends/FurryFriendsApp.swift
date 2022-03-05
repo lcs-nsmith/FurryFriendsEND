@@ -11,16 +11,19 @@ import SwiftUI
 struct FurryFriendsApp: App {
     var body: some Scene {
         WindowGroup {
+            // Displays the views in tabs
             TabView {
                 DogsView()
+                    // The 'label' of the tab
                     .tabItem {
+                        //Custom icon of dog
                         Image("dogIcon")
-                            .resizable()
-                            .frame(width: 1, height: 1, alignment: .center)
                         Text("Dogs")
                     }
                 CatsView()
+                    // The 'label' of the tab
                     .tabItem {
+                        //Custom icon of cat
                         Image("catIcon")
                         Text("Cats")
                     }
