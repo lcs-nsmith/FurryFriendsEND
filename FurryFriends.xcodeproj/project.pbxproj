@@ -10,6 +10,7 @@
 		4A9CAEBA27D2C45200E632DE /* DogPathEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9CAEB927D2C45200E632DE /* DogPathEndpoint.swift */; };
 		4A9CAEBF27D3B99A00E632DE /* CatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9CAEBE27D3B99A00E632DE /* CatsView.swift */; };
 		4A9CAEC127D3BAB000E632DE /* CatPathEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9CAEC027D3BAB000E632DE /* CatPathEndpoint.swift */; };
+		4A9CAEC327D3C9D000E632DE /* FetchNewImageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9CAEC227D3C9D000E632DE /* FetchNewImageButtonView.swift */; };
 		8134B14527CA4862004DEB85 /* FurryFriendsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8134B14427CA4862004DEB85 /* FurryFriendsApp.swift */; };
 		8134B14727CA4862004DEB85 /* DogsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8134B14627CA4862004DEB85 /* DogsView.swift */; };
 		8134B14927CA4863004DEB85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8134B14827CA4863004DEB85 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		4A9CAEB927D2C45200E632DE /* DogPathEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogPathEndpoint.swift; sourceTree = "<group>"; };
 		4A9CAEBE27D3B99A00E632DE /* CatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsView.swift; sourceTree = "<group>"; };
 		4A9CAEC027D3BAB000E632DE /* CatPathEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatPathEndpoint.swift; sourceTree = "<group>"; };
+		4A9CAEC227D3C9D000E632DE /* FetchNewImageButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchNewImageButtonView.swift; sourceTree = "<group>"; };
 		8134B14127CA4862004DEB85 /* FurryFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FurryFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8134B14427CA4862004DEB85 /* FurryFriendsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurryFriendsApp.swift; sourceTree = "<group>"; };
 		8134B14627CA4862004DEB85 /* DogsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsView.swift; sourceTree = "<group>"; };
@@ -51,13 +53,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		4A9CAEBB27D3B8F900E632DE /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		8134B13827CA4862004DEB85 = {
 			isa = PBXGroup;
 			children = (
@@ -78,7 +73,6 @@
 		8134B14327CA4862004DEB85 /* FurryFriends */ = {
 			isa = PBXGroup;
 			children = (
-				4A9CAEBB27D3B8F900E632DE /* New Group */,
 				8134B14427CA4862004DEB85 /* FurryFriendsApp.swift */,
 				4A9CAEB827D2C41600E632DE /* Model */,
 				8134B15227CA55BC004DEB85 /* Views */,
@@ -110,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				8134B15327CA55F4004DEB85 /* RemoteImageView.swift */,
+				4A9CAEC227D3C9D000E632DE /* FetchNewImageButtonView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -189,6 +184,7 @@
 				8134B14727CA4862004DEB85 /* DogsView.swift in Sources */,
 				4A9CAEC127D3BAB000E632DE /* CatPathEndpoint.swift in Sources */,
 				8134B15427CA55F4004DEB85 /* RemoteImageView.swift in Sources */,
+				4A9CAEC327D3C9D000E632DE /* FetchNewImageButtonView.swift in Sources */,
 				4A9CAEBF27D3B99A00E632DE /* CatsView.swift in Sources */,
 				8134B14527CA4862004DEB85 /* FurryFriendsApp.swift in Sources */,
 			);

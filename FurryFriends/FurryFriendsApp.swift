@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct FurryFriendsApp: App {
+    
+    //MARK: Computed Properties
     var body: some Scene {
         WindowGroup {
             // Displays the views in tabs
