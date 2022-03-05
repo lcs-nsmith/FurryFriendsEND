@@ -29,6 +29,13 @@ struct FurryFriendsApp: App {
                         Image("catIcon")
                         Text("Cats")
                     }
+                FavouritesListView()
+                // The 'label' of the tab
+                .tabItem {
+                    //Custom icon of cat
+                    Image(systemName: "heart.circle")
+                    Text("Favourites")
+                }
             }
         }
     }
