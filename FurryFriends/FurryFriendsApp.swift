@@ -9,33 +9,43 @@ import SwiftUI
 
 @main
 struct FurryFriendsApp: App {
+    // MARK: Stored Properties
     
-    //MARK: Computed Properties
+    // The list of favourites
+    @State private var favouriteList: [DogPathEndpoint] = []
+    
+    // MARK: Computed Properties
     var body: some Scene {
         WindowGroup {
+                
             // Displays the views in tabs
             TabView {
-                DogsView()
-                    // The 'label' of the tab
+                
+                // Passing in 'favouriteList' into the 'favourites' variable in the view
+                DogsView(favourites: $favouriteList)
+                // The 'label' of the tab
                     .tabItem {
                         //Custom icon of dog
                         Image("dogIcon")
                         Text("Dogs")
                     }
-//                CatsView()
-//                    // The 'label' of the tab
-//                    .tabItem {
-//                        //Custom icon of cat
-//                        Image("catIcon")
-//                        Text("Cats")
-//                    }
-                FavouritesListView()
+                
+                /// Removed the CatView becuase the endpoint is not working
+            //  CatsView()
+//             // The 'label' of the tab
+//                   .tabItem {
+//                      //Custom icon of cat
+//                       Image("catIcon")
+                //       Text("Cats")
+                //   }
+                
+                // Passing in 'favouriteList' into the 'favourites' variable in the view
+                FavouritesListView(favourites: $favouriteList)
                 // The 'label' of the tab
-                .tabItem {
-                    //Custom icon of cat
-                    Image(systemName: "heart.text.square")
-                    Text("Favourites")
-                }
+                    .tabItem {
+                        Image(systemName: "heart.text.square") // favourites icon
+                        Text("Favourites")
+                    }
             }
         }
     }
