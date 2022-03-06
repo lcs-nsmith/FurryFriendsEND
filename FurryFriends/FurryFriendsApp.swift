@@ -22,18 +22,18 @@ struct FurryFriendsApp: App {
                         Image("dogIcon")
                         Text("Dogs")
                     }
-                CatsView()
-                    // The 'label' of the tab
-                    .tabItem {
-                        //Custom icon of cat
-                        Image("catIcon")
-                        Text("Cats")
-                    }
+//                CatsView()
+//                    // The 'label' of the tab
+//                    .tabItem {
+//                        //Custom icon of cat
+//                        Image("catIcon")
+//                        Text("Cats")
+//                    }
                 FavouritesListView()
                 // The 'label' of the tab
                 .tabItem {
                     //Custom icon of cat
-                    Image(systemName: "heart.circle")
+                    Image(systemName: "heart.text.square")
                     Text("Favourites")
                 }
             }
