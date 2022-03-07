@@ -15,11 +15,42 @@ struct FavouritesListView: View {
     
     // MARK: Computed Properties
     var body: some View {
-        // Iterates list of favourites
-        // currentFavourite allows individual 'favourites' to be accessed
-        List(favourites, id: \.self) { currentFavourite in
-                                    // Wraps string to URL
-            RemoteImageView(fromURL: URL(string: currentFavourite.message)!)
+        ZStack {
+            // page background
+            Color("ListColour")
+                .ignoresSafeArea()
+            
+            // page foregound
+            VStack {
+                HStack {
+                    
+                    // Pushes button to the right side of the screen
+                    Spacer()
+                    
+                    Button(action: {
+                        Task {
+                            // removes all items from favourites list
+                            favourites.removeAll()
+                        }
+                    }, label: {
+                        Text("Clear Favourites") // Text displayed on the button
+                            .font(.title2)
+                    })
+                        .buttonStyle(.borderedProminent)
+                        .tint(Color("Primary")) // button colour
+                        .foregroundColor(Color("Tertiary")) // text colour
+                        .padding()
+                        .padding(.top, 25) // extra padding on top to bring the button out of the safe area
+                }
+                
+                // Iterates list of favourites
+                // currentFavourite allows individual 'favourites' to be accessed
+                List(favourites, id: \.self) { currentFavourite in
+                    // Wraps string to URL
+                    RemoteImageView(fromURL: URL(string: currentFavourite.message)!)
+                }
+            }
+            .ignoresSafeArea() // the vstack extends past the edges of the safe area
         }
     }
 }

@@ -24,38 +24,45 @@ struct DogsView: View {
     
     // MARK: Computed properties
     var body: some View {
-        
-        VStack() {
+        ZStack {
             
-            // Shows the main image
-            RemoteImageView(fromURL: URL(string: path.message)!)
-            // Force unwrapped, will fail (and has failed) if there is no value that can be obtained
+            // page background
+            Color("ListColour")
+                .ignoresSafeArea()
             
-            HStack {
-                Button(action: {
-                    Task {
-                        // Calls function that loads a new photo
-                        await loadNewImage()
-                    }
-                }, label: {
-                    Text("Show me another dog!") // Text displayed on the button
-                        .font(.title2)
-                })
-                    .buttonStyle(.bordered)
-                    .padding()
-                    .tint(.black)
+            // page foreground
+            VStack() {
+                // Shows the main image
+                RemoteImageView(fromURL: URL(string: path.message)!)
+                // Force unwrapped, will fail if there is no value that can be obtained
                 
-                Image(systemName: "heart.circle")
-                    .resizable()
-                    .frame(width: 40, height: 40)
-                // if the current image is in the favourites, then change the foregorund colour to red
-                    .foregroundColor(favourites.contains(path) == true ? .red : .gray)
-                    .onTapGesture {
-                        // if the current image is not in the favourites already, append it to the favourites
-                        if favourites.contains(path) == false {
-                            favourites.append(path)
+                HStack {
+                    Button(action: {
+                        Task {
+                            // Calls function that loads a new photo
+                            await loadNewImage()
                         }
-                    }
+                    }, label: {
+                        Text("Show me another dog!") // Text displayed on the button
+                            .font(.title2)
+                    })
+                        .buttonStyle(.borderedProminent)
+                        .tint(Color("Primary")) // button colour
+                        .foregroundColor(Color("Tertiary")) // text colour
+                        .padding()
+                    
+                    Image(systemName: "heart.circle")
+                        .resizable()
+                        .frame(width: 40, height: 40)
+                    // if the current image is in the favourites, then change the foregorund colour to red, if not, then the button colour should be secondary (gray)
+                        .foregroundColor(favourites.contains(path) == true ? .red : .secondary)
+                        .onTapGesture {
+                            // if the current image is not in the favourites already, append it to the favourites
+                            if favourites.contains(path) == false {
+                                favourites.append(path)
+                            }
+                        }
+                }
             }
         }
         // Runs once when the app is opened
