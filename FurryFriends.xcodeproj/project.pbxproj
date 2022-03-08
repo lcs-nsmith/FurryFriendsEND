@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A545C5D27D7D2CF00FE9C25 /* SharedFunctionsAndConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A545C5C27D7D2CF00FE9C25 /* SharedFunctionsAndConstants.swift */; };
 		4A9CAEBA27D2C45200E632DE /* DogPathEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9CAEB927D2C45200E632DE /* DogPathEndpoint.swift */; };
 		4A9CAEBF27D3B99A00E632DE /* CatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9CAEBE27D3B99A00E632DE /* CatsView.swift */; };
 		4A9CAEC127D3BAB000E632DE /* CatPathEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9CAEC027D3BAB000E632DE /* CatPathEndpoint.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A545C5C27D7D2CF00FE9C25 /* SharedFunctionsAndConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFunctionsAndConstants.swift; sourceTree = "<group>"; };
 		4A9CAEB927D2C45200E632DE /* DogPathEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogPathEndpoint.swift; sourceTree = "<group>"; };
 		4A9CAEBE27D3B99A00E632DE /* CatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsView.swift; sourceTree = "<group>"; };
 		4A9CAEC027D3BAB000E632DE /* CatPathEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatPathEndpoint.swift; sourceTree = "<group>"; };
@@ -47,6 +49,7 @@
 		4A545C5B27D7CF8E00FE9C25 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				4A545C5C27D7D2CF00FE9C25 /* SharedFunctionsAndConstants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				8134B14727CA4862004DEB85 /* DogsView.swift in Sources */,
 				4A9CAEC127D3BAB000E632DE /* CatPathEndpoint.swift in Sources */,
 				8134B15427CA55F4004DEB85 /* RemoteImageView.swift in Sources */,
+				4A545C5D27D7D2CF00FE9C25 /* SharedFunctionsAndConstants.swift in Sources */,
 				4AB37CCA27D3D5AD0020583D /* FavouritesListView.swift in Sources */,
 				4A9CAEBF27D3B99A00E632DE /* CatsView.swift in Sources */,
 				8134B14527CA4862004DEB85 /* FurryFriendsApp.swift in Sources */,

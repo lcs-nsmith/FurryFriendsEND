@@ -73,6 +73,9 @@ struct DogsView: View {
             // If the app has just started, load a new image
             if isIntialStartup == true {
                 await loadNewImage()
+                
+            //  Loads the favourites saved in local storage
+                await loadFavourites()
             }
             // set 'isIntialSetup' to false so that a new image is now loaded when the user switches so a different tab and comes back
             isIntialStartup = false
@@ -124,6 +127,65 @@ struct DogsView: View {
             print("Could not retrieve or decode the JSON from endpoint.")
             // Print the contents of the "error" constant that the do-catch block populates
             print(error)
+        }
+    }
+    
+    // Saves the the data to local storage
+    func persistFavourites() {
+        // Get a location to save the data
+        let filename = getDocumentDirectory()
+            .appendingPathComponent(savedFavouritesLabel)
+        
+        // Tries to encode the data in the list of favourites to JSON format
+        do {
+            let encoder = JSONEncoder()
+            
+            // Directs the encoder to format the output as 'pretty print', meaning that it is easily readable by humans
+            encoder.outputFormatting = .prettyPrinted
+            
+            // Encodes the list of favourites
+            let data = try encoder.encode(favourites)
+            
+            // Writes the JSON formatted data to a file in the filename location derived in 'getDocumentDirectory'
+            // .atomicWrite means the write will either succeed or fail, it won't write part of a file
+            // .completeFileProtection means that the data will be encrypted
+            try data.write(to: filename, options: [.atomicWrite, .completeFileProtection])
+            
+            // Diagnostics
+            print("* data write successful *")
+            print("=============")
+            print(String(data: data, encoding: .utf8)!)
+        } catch {
+            // Diagnostics
+            print("* error writing data *")
+            print("=============")
+            print(error.localizedDescription)
+        }
+    }
+    
+    // Loads the data saved in local storage
+    func loadFavourites() async {
+        // Gets the location for where the data is saved
+        let filename = getDocumentDirectory()
+            .appendingPathComponent(savedFavouritesLabel)
+        
+        // Attempts to load the data from local storage
+        do {
+            // Load the RAW data from local storage
+            let data = try  Data(contentsOf: filename)
+            
+            // Decodes the RAW data to a data structure native to swift
+            favourites = try JSONDecoder().decode([DogPathEndpoint].self, from: data)
+            
+            // Diagnostics
+            print("* read data from the documents directory with success *")
+            print("=============")
+            print(String(data: data, encoding: .utf8)!)
+        } catch {
+            // Diagnostics
+            print("* error fetching stored data *")
+            print("=============")
+            print(error.localizedDescription)
         }
     }
 }
