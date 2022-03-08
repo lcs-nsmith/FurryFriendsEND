@@ -19,6 +19,9 @@ struct DogsView: View {
     // Keeps track of favourites
     @Binding var favourites: [DogPathEndpoint]
     
+    // Detect when the app changes states (background, foreground, inactive)
+    @Environment(\.scenePhase) var scenePhase
+    
     // Relative to whether the app has just started
     @State var isIntialStartup: Bool = true
     
@@ -73,6 +76,16 @@ struct DogsView: View {
             }
             // set 'isIntialSetup' to false so that a new image is now loaded when the user switches so a different tab and comes back
             isIntialStartup = false
+        }
+        // Peforms a function when the app state changes (foreground, background, inactive)
+        .onChange(of: scenePhase) { newPhase in
+            if newPhase == .inactive {
+                print("inactive")
+            } else if newPhase == .active {
+                print("active")
+            } else {
+                print("background")
+            }
         }
         .navigationTitle("Furry Friends")
         

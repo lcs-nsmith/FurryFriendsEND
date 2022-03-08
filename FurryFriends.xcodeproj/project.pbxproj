@@ -44,6 +44,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A545C5B27D7CF8E00FE9C25 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		4A9CAEB827D2C41600E632DE /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +83,7 @@
 				8134B14427CA4862004DEB85 /* FurryFriendsApp.swift */,
 				4A9CAEB827D2C41600E632DE /* Model */,
 				8134B15227CA55BC004DEB85 /* Views */,
+				4A545C5B27D7CF8E00FE9C25 /* Helpers */,
 				8134B14827CA4863004DEB85 /* Assets.xcassets */,
 				8134B14A27CA4863004DEB85 /* Preview Content */,
 			);
@@ -96,17 +104,17 @@
 				8134B14627CA4862004DEB85 /* DogsView.swift */,
 				4A9CAEBE27D3B99A00E632DE /* CatsView.swift */,
 				4AB37CC927D3D5AD0020583D /* FavouritesListView.swift */,
-				8134B15727CA5B63004DEB85 /* Helpers */,
+				8134B15727CA5B63004DEB85 /* Helper Views */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		8134B15727CA5B63004DEB85 /* Helpers */ = {
+		8134B15727CA5B63004DEB85 /* Helper Views */ = {
 			isa = PBXGroup;
 			children = (
 				8134B15327CA55F4004DEB85 /* RemoteImageView.swift */,
 			);
-			path = Helpers;
+			path = "Helper Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
