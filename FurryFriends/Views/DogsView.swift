@@ -88,6 +88,7 @@ struct DogsView: View {
                 print("active")
             } else {
                 print("background")
+                persistFavourites()
             }
         }
         .navigationTitle("Furry Friends")
