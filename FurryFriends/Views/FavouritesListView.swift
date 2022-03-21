@@ -36,11 +36,11 @@ struct FavouritesListView: View {
                         Text("Clear Favourites") // Text displayed on the button
                             .font(.title2)
                     })
-                        .buttonStyle(.borderedProminent)
-                        .tint(Color("Primary")) // button colour
-                        .foregroundColor(Color("Tertiary")) // text colour
-                        .padding()
-                        .padding(.top, 25) // extra padding on top to bring the button out of the safe area
+                    .buttonStyle(.borderedProminent)
+                    .tint(Color("Primary")) // button colour
+                    .foregroundColor(Color("Tertiary")) // text colour
+                    .padding()
+                    .padding(.top, 25) // extra padding on top to bring the button out of the safe area
                 }
                 
                 // Iterates list of favourites

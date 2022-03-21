@@ -25,8 +25,8 @@ struct RemoteImageView: View {
                    placeholder: {
             ProgressView()
         })
-            .padding(.vertical)
-
+        .padding(.vertical)
+        
     }
     
 }

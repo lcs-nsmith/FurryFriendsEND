@@ -49,10 +49,10 @@ struct DogsView: View {
                         Text("Show me another dog!") // Text displayed on the button
                             .font(.title2)
                     })
-                        .buttonStyle(.borderedProminent)
-                        .tint(Color("Primary")) // button colour
-                        .foregroundColor(Color("Tertiary")) // text colour
-                        .padding()
+                    .buttonStyle(.borderedProminent)
+                    .tint(Color("Primary")) // button colour
+                    .foregroundColor(Color("Tertiary")) // text colour
+                    .padding()
                     
                     Image(systemName: "heart.circle")
                         .resizable()
@@ -74,7 +74,7 @@ struct DogsView: View {
             if isIntialStartup == true {
                 await loadNewImage()
                 
-            //  Loads the favourites saved in local storage
+                //  Loads the favourites saved in local storage
                 await loadFavourites()
             }
             // set 'isIntialSetup' to false so that a new image is now loaded when the user switches so a different tab and comes back

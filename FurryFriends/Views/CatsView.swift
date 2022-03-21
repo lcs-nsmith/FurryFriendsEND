@@ -26,7 +26,7 @@ struct CatsView: View {
             // Shows the main image
             RemoteImageView(fromURL: URL(string: path.file)!)
             // Force unwrapped, will fail (and has failed) if there is no value that can be obtained
-                        
+            
             Button(action: {
                 Task {
                     // Calls function that loads a new photo
@@ -36,9 +36,9 @@ struct CatsView: View {
                 Text("New Image")
                     .font(.title2)
             })
-                .buttonStyle(.bordered)
-                .padding()
-                .tint(.black)
+            .buttonStyle(.bordered)
+            .padding()
+            .tint(.black)
             
         }
         // Runs once when the app is opened

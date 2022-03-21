@@ -17,7 +17,7 @@ struct FurryFriendsApp: App {
     // MARK: Computed Properties
     var body: some Scene {
         WindowGroup {
-                
+            
             // Displays the views in tabs
             TabView {
                 
@@ -31,11 +31,11 @@ struct FurryFriendsApp: App {
                     }
                 
                 /// Removed the CatView becuase the endpoint is not working
-            //  CatsView()
-//             // The 'label' of the tab
-//                   .tabItem {
-//                      //Custom icon of cat
-//                       Image("catIcon")
+                //  CatsView()
+                //             // The 'label' of the tab
+                //                   .tabItem {
+                //                      //Custom icon of cat
+                //                       Image("catIcon")
                 //       Text("Cats")
                 //   }
                 
